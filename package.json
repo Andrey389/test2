@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/crazy-hunters-js-project/",
+    "build": "vite build --base=/test-2/",
     "preview": "vite preview"
   },
   "devDependencies": {
