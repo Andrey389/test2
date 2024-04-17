@@ -125,23 +125,18 @@
     letter-spacing: -0.02em;
     color: #fafafa;
 }
-
 .about-me-swiper {
     margin-top: 32px;
 }
-
-.list-item-about {
-
+.list-item-about{
     margin: 0;
     overflow: hidden;
 }
-
-.about-list-swiper>.swiper-slide {
+.about-list-swiper > .swiper-slide{
     display: block;
     overflow: hidden;
     clear: both;
 }
-
 .about-swipper {
     position: relative;
     display: flex;
@@ -149,7 +144,6 @@
     flex-wrap: nowrap;
 
 }
-
 .swiper-slide-item {
     margin: 0;
     padding: 0;
@@ -164,20 +158,17 @@
     box-sizing: border-box;
     color: #fafafa;
 }
-
 .swipper-and-button-wraper {
     margin-top: 32px;
 }
-
 .about-swiper-next-button {
-    position: absolute;
-    bottom: 50px;
-    right: 5px;
-    z-index: 100;
-    background-color: transparent;
-    border: none
+position: absolute;
+bottom: 50px;
+right: 5px;
+z-index: 10;
+background-color: transparent;
+border: none
 }
-
 .abouot-icon-next-button {
     width: 28px;
     height: 28px;
@@ -185,11 +176,10 @@
     justify-content: center;
     align-items: center;
     border-color: transparent;
-    fill: transparent;
-    stroke: #fafafa;
+    fill: none;
+    stroke: #3b3b3b;
 }
-
-.about-list-swiper {
+.about-list-swiper{
     display: flex;
     gap: 0;
 }
@@ -238,23 +228,19 @@
         letter-spacing: -0.02em;
         color: #fafafa;
     }
-
-    .about-me-swiper {
-        margin-top: 64px;
-    }
-
-    .swiper-slide-item {
-
-        width: 200px;
-        height: 200px;
-    }
-
-    .about-swiper-next-button {
-        position: absolute;
-        bottom: 85px;
-        right: 1px;
-        stroke: #fafafa;
-    }
+        .about-me-swiper {
+              margin-top: 64px;
+        }
+    
+        .swiper-slide-item {
+   
+              width: 200px;
+              height: 200px;
+        }
+        .about-swiper-next-button {
+            position: absolute;
+            bottom: 85px;
+            right: 1px;}
 }
 
 
@@ -297,15 +283,14 @@
         width: 1200px;
 
     }
-
     .about-me-swiper {
-        margin-top: 96px;
-    }
-
+              margin-top: 96px;
+          }
+    
     .swiper-slide-item {
-        width: 200px;
-        height: 200px;
-    }
+              width: 200px;
+              height: 200px;
+          }
 
 }
 
