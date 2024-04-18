@@ -34,10 +34,9 @@ const swiper = new Swiper(aboutMeSwiperBox, {
   },
 });
 swiper.update();
-const firstSlide = document.querySelector('.swiper-slide:first-child');
+const firstSlide = document.querySelector('.swiper-slide-item');
 
 firstSlide.style.backgroundColor = 'rgb(237, 59, 68)';
-
 
 swiper.on('slideChangeTransitionStart', () => {
   const currentIndex = swiper.activeIndex;
@@ -48,9 +47,40 @@ swiper.on('slideChangeTransitionStart', () => {
     previousSlide.style.backgroundColor = 'initial';
   }
 
+  // const nextSlide = swiper.slides[currentIndex + 1];
+  // if (nextSlide) {
+  //   console.log(nextSlide);
+  //   firstSlide.style.backgroundColor = 'rgb(237, 59, 68)';
+  // }
   const currentSlide = swiper.slides[currentIndex];
-
+  console.log(currentSlide);
   currentSlide.style.backgroundColor = 'rgb(237, 59, 68)';
+});
+
+let currentDivIndex = 0; // Індекс поточного div
+const divs = document.querySelectorAll('.swiper-slide-item'); // Отримуємо всі divs
+
+swiper.on('slideChangeTransitionStart', () => {
+  const currentIndex = swiper.activeIndex;
+
+  const previousSlide = swiper.slides[currentIndex - 1];
+  if (previousSlide) {
+    previousSlide.style.backgroundColor = 'initial';
+  }
+
+  const nextSlide = swiper.slides[currentIndex + 1];
+  if (nextSlide) {
+    console.log(nextSlide);
+    if (divs[currentDivIndex]) {
+      // Перевіряємо, чи існує поточний div
+      divs[currentDivIndex].style.backgroundColor = 'initial'; // Скидаємо стиль поточного div
+    }
+    currentDivIndex = (currentDivIndex + 1) % divs.length; // Переходимо до наступного div
+    if (divs[currentDivIndex]) {
+      // Перевіряємо, чи існує наступний div
+      divs[currentDivIndex].style.backgroundColor = 'rgb(237, 59, 68)'; // Змінюємо стиль наступного
+    }
+  }
 });
 
 new Accordion('.about-education', {
